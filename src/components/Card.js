@@ -12,12 +12,12 @@ function MainCard() {
             <Card style={{ width: '23rem', marginBottom: '1rem', borderBottom: '0.4rem solid orange' }}>
                 <Card.Img variant="top" src={`${bishop}`} height={350} />
                 <Card.Body>
-                    <Card.Title>Spirit Filled Teachers</Card.Title>
+                    <Card.Title>We Have A Lot Of Spirit Filled Teachers</Card.Title>
                     <Card.Text>
                         Lives Are Impacted Through Our Teachers.
                     </Card.Text>
                     <Link to={`/gallery`}>
-                        <Button variant="primary">See More</Button>
+                        <Button style={{ backgroundColor: '#D05270', border: 'none' }}>See More</Button>
                     </Link>
                 </Card.Body>
             </Card>
@@ -30,7 +30,7 @@ function MainCard() {
                         With Our Online Christian E-Library, You Can Read Various Books To Uplift Your Soul And Spirit
                     </Card.Text>
                     <Link to={`/course`}>
-                        <Button variant="primary">
+                        <Button style={{ backgroundColor: '#D05270', border: 'none' }}>
                             Go To Courses
                         </Button>
                     </Link>
@@ -45,7 +45,7 @@ function MainCard() {
                         Study Both In Our Bible School And Online Using Our Christian E-Library
                     </Card.Text>
                     <Link to={`/contact`}>
-                        <Button variant="primary">Check Location</Button>
+                        <Button style={{ backgroundColor: '#D05270', border: 'none' }}>Check Location</Button>
                     </Link>
                 </Card.Body>
             </Card>

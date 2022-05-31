@@ -33,7 +33,7 @@ function ProfileBody() {
             <br />
             <hr />
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: "center" }}>
-                <h2>Registered Courses</h2>
+                <h6>Registered Courses</h6>
                 <Button><Link style={{ textDecoration: 'none', color: 'white' }} to={`/registercourse`}>Register New Course</Link></Button>
             </div>
             <div className='register'>
