@@ -30,9 +30,9 @@
 }
 
 .profileImage {
-    width: 25%;
-    height: 25%;
-    border: 0.3rem solid blue;
+    width: 20%;
+    height: 20%;
+    border: 0.1rem solid #d62750;
     border-radius: 100%;
 }
 
@@ -41,7 +41,6 @@
 }
 
 .copy {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -52,7 +51,6 @@
 }
 
 .footHead {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -61,14 +59,11 @@
 }
 
 .footLink {
-    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 17px;
-
     text-align: justify;
-
     color: #424242;
 }
 
@@ -87,11 +82,10 @@
     justify-content: space-around;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 5rem;
+    margin-top: 2rem;
 }
 
 #story {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -100,10 +94,25 @@
 }
 
 #storyline {
-    font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 24px;
     color: #D05270;
+}
+
+.cardTitle {
+    font-weight: 700;
+}
+
+.myFoot {
+    font-family: 'Changa', sans-serif;
+}
+
+.contactUs {
+    font-family: 'Changa', sans-serif;
+}
+
+.profileBody {
+    font-family: 'Caveat', cursive;
 }
