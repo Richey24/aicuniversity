@@ -33,7 +33,7 @@ function Footer() {
           </div>
           <div>
             <p className="footHead">Key Features</p>
-            <Link style={{ textDecoration: "none" }} to={`/courses`}>
+            <Link style={{ textDecoration: "none" }} to={`/course`}>
               <p className="footLink">Courses</p>
             </Link>
             <Link style={{ textDecoration: "none" }} to={`/gallery`}>
