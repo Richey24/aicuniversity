@@ -1,4 +1,4 @@
-import { Container, Form, Button } from "react-bootstrap";
+import { Container, Form, Button, Spinner } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import Header from "./Header";
@@ -8,6 +8,7 @@ import { backend_url } from "../env";
 
 function ProfileForm() {
   let [err, setErr] = useState("");
+  let [load, setLoad] = useState(false);
 
   let navigate = useNavigate();
   let [{ userId }] = useCookies();
@@ -18,6 +19,7 @@ function ProfileForm() {
     }
   });
   const completeRegister = async (event) => {
+    setLoad(true);
     event.preventDefault();
     let body = {
       country: event.target[0].value,
@@ -28,6 +30,7 @@ function ProfileForm() {
     };
     let res = await axios.post(`${backend_url}/complete`, body);
     let response = await res.data;
+    setLoad(false);
     if (response.message) {
       setErr(response.message);
       return;
@@ -93,7 +96,11 @@ function ProfileForm() {
               }}
               type="submit"
             >
-              Submit
+              {load ? (
+                <Spinner animation="border" style={{ color: "#D05270" }} />
+              ) : (
+                "Submit"
+              )}
             </Button>
           </Form>
         </Container>

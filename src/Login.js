@@ -1,4 +1,4 @@
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container, Spinner } from "react-bootstrap";
 import Header from "./components/Header";
 import { useNavigate } from "react-router-dom";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
@@ -9,6 +9,7 @@ import { backend_url } from "./env";
 
 function Login() {
   let [err, setErr] = useState("");
+  let [load, setLoad] = useState(false);
   let [{ userId }, setCookie] = useCookies(["userId"]);
   let navigate = useNavigate();
   useEffect(() => {
@@ -35,6 +36,7 @@ function Login() {
   };
 
   const mainLogin = async (event) => {
+    setLoad(true);
     event.preventDefault();
     let body = {
       email: event.target[0].value,
@@ -42,6 +44,7 @@ function Login() {
     };
     let res = await axios.post(`${backend_url}/login`, body);
     let response = await res.data;
+    setLoad(false);
     if (response.message) {
       setErr(response.message);
       return;
@@ -125,7 +128,11 @@ function Login() {
                 }}
                 type="submit"
               >
-                Login
+                {load ? (
+                  <Spinner animation="border" style={{ color: "#D05270" }} />
+                ) : (
+                  "Login"
+                )}
               </Button>
             </div>
             <div

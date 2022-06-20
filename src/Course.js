@@ -5,12 +5,12 @@ import "./App.css";
 import { Card, Button, InputGroup, FormControl } from "react-bootstrap";
 import { courseList } from "./utils/courselist";
 import { useState, useEffect } from "react";
-import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+// import { useCookies } from "react-cookie";
+// import { useNavigate } from "react-router-dom";
 
 function Course() {
-  let [{ userId }] = useCookies();
-  let navigate = useNavigate();
+  // let [{ userId }] = useCookies();
+  // let navigate = useNavigate();
   let [lists, setLists] = useState(courseList);
   let [thelist, setTheLists] = useState(courseList);
   let [single, setSingle] = useState("");
@@ -29,13 +29,13 @@ function Course() {
     }
   };
 
-  const read = () => {
-    if (userId) {
-      navigate("/profile");
-    } else {
-      navigate("/login");
-    }
-  };
+  // const read = () => {
+  //   if (userId) {
+  //     navigate("/profile");
+  //   } else {
+  //     navigate("/login");
+  //   }
+  // };
 
   const hide = () => {
     let main = document.getElementById("main");
@@ -96,7 +96,7 @@ function Course() {
                       {list.courseName}
                     </Card.Title>
                     <Card.Text className="fw-bold">{list.teacher}</Card.Text>
-                    <Button
+                    {/* <Button
                       onClick={read}
                       style={{
                         backgroundColor: "#d62750",
@@ -104,7 +104,7 @@ function Course() {
                       }}
                     >
                       Read
-                    </Button>
+                    </Button> */}
                   </Card.Body>
                 </Card>
               </div>

@@ -2,7 +2,14 @@ import Footer from "./Footer";
 import Header from "./Header";
 import course from "../img/course.jpeg";
 import "../App.css";
-import { Card, Button, InputGroup, FormControl, Modal } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  InputGroup,
+  FormControl,
+  Modal,
+  Spinner,
+} from "react-bootstrap";
 import { courseList } from "../utils/courselist";
 import { useState } from "react";
 import axios from "axios";
@@ -17,18 +24,20 @@ function RegisterCourse() {
   let [single, setSingle] = useState("");
   let [title, setTitle] = useState("");
   let [err, setErr] = useState("");
+  let [load, setLoad] = useState(false);
   let [{ userId }] = useCookies();
 
   const handleShow = async (course, teacher) => {
-    let user = await axios.post(`${backend_url}/course`, {
+    setLoad(true);
+    await axios.post(`${backend_url}/course`, {
       id: userId,
       course: {
         course,
         teacher,
       },
     });
-    let res = await user.data;
     setTitle(course);
+    setLoad(false);
     setShow(true);
   };
   const filterList = (event) => {
@@ -106,7 +115,14 @@ function RegisterCourse() {
                         border: "none",
                       }}
                     >
-                      Register
+                      {load ? (
+                        <Spinner
+                          animation="border"
+                          style={{ color: "#D05270" }}
+                        />
+                      ) : (
+                        "Register"
+                      )}
                     </Button>
                   </Card.Body>
                 </Card>

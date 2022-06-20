@@ -1,4 +1,4 @@
-import { Card, Button } from "react-bootstrap";
+import { Card } from "react-bootstrap";
 import course from "../img/course.jpeg";
 
 function HomeCourse() {
@@ -25,9 +25,9 @@ function HomeCourse() {
             <Card.Text className="fw-bold">
               Teacher - Dr Sunday Uahomo
             </Card.Text>
-            <Button style={{ backgroundColor: "#d62750", border: "none" }}>
+            {/* <Button style={{ backgroundColor: "#d62750", border: "none" }}>
               Read
-            </Button>
+            </Button> */}
           </Card.Body>
         </Card>
         <Card
@@ -45,9 +45,9 @@ function HomeCourse() {
             <Card.Text className="fw-bold">
               Teacher - Dr Sunday Uahomo
             </Card.Text>
-            <Button style={{ backgroundColor: "#d62750", border: "none" }}>
+            {/* <Button style={{ backgroundColor: "#d62750", border: "none" }}>
               Read
-            </Button>
+            </Button> */}
           </Card.Body>
         </Card>
         <Card
@@ -65,9 +65,9 @@ function HomeCourse() {
             <Card.Text className="fw-bold">
               Teacher - Dr Sunday Uahomo
             </Card.Text>
-            <Button style={{ backgroundColor: "#d62750", border: "none" }}>
+            {/* <Button style={{ backgroundColor: "#d62750", border: "none" }}>
               Read
-            </Button>
+            </Button> */}
           </Card.Body>
         </Card>
         <Card
@@ -85,9 +85,9 @@ function HomeCourse() {
             <Card.Text className="fw-bold">
               Teacher - Dr Sunday Uahomo
             </Card.Text>
-            <Button style={{ backgroundColor: "#d62750", border: "none" }}>
+            {/* <Button style={{ backgroundColor: "#d62750", border: "none" }}>
               Read
-            </Button>
+            </Button> */}
           </Card.Body>
         </Card>
         <Card
@@ -105,9 +105,9 @@ function HomeCourse() {
             <Card.Text className="fw-bold">
               Teacher - Dr Sunday Uahomo
             </Card.Text>
-            <Button style={{ backgroundColor: "#d62750", border: "none" }}>
+            {/* <Button style={{ backgroundColor: "#d62750", border: "none" }}>
               Read
-            </Button>
+            </Button> */}
           </Card.Body>
         </Card>
         <Card
@@ -123,9 +123,9 @@ function HomeCourse() {
               THE ANOINTING - COURSE D122
             </Card.Title>
             <Card.Text>Teacher - Dr Sunday Uahomo</Card.Text>
-            <Button style={{ backgroundColor: "#d62750", border: "none" }}>
+            {/* <Button style={{ backgroundColor: "#d62750", border: "none" }}>
               Read
-            </Button>
+            </Button> */}
           </Card.Body>
         </Card>
       </div>

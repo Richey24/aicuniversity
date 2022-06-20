@@ -14,7 +14,7 @@ function Footer() {
       </p>
       <footer className="foot">
         <div className={"mainFoot"}>
-          <div style={{ marginRight: "1rem" }}>
+          {/* <div style={{ marginRight: "1rem" }}>
             <p style={{ marginLeft: "-1.8rem" }} className="footHead">
               Quick Link
             </p>
@@ -30,9 +30,9 @@ function Footer() {
             <Link style={{ textDecoration: "none" }} to={`/register`}>
               <p className="footLink">Register</p>
             </Link>
-          </div>
+          </div> */}
           <div>
-            <p className="footHead">Key Features</p>
+            <p className="footHead">Key Pages</p>
             <Link style={{ textDecoration: "none" }} to={`/course`}>
               <p className="footLink">Courses</p>
             </Link>

@@ -1,4 +1,4 @@
-import { Form, Button, Container } from "react-bootstrap";
+import { Form, Button, Container, Spinner } from "react-bootstrap";
 import Header from "./components/Header";
 import { useNavigate } from "react-router-dom";
 import FacebookLogin from "react-facebook-login/dist/facebook-login-render-props";
@@ -9,6 +9,7 @@ import { backend_url } from "./env";
 
 function Register() {
   let [err, setErr] = useState("");
+  let [load, setLoad] = useState(false);
   let navigate = useNavigate();
 
   let [{ userId }, setCookie] = useCookies(["userId"]);
@@ -39,6 +40,7 @@ function Register() {
   };
 
   const normalRegister = async (event) => {
+    setLoad(true);
     event.preventDefault();
     let image = new FormData();
     if (event.target[2].files[0]) {
@@ -57,6 +59,7 @@ function Register() {
     };
     let res = await axios.post(`${backend_url}/register`, body);
     let response = await res.data;
+    setLoad(false);
     if (response.message) {
       setErr(response.message);
       return;
@@ -151,7 +154,11 @@ function Register() {
                 }}
                 type="submit"
               >
-                Register
+                {load ? (
+                  <Spinner animation="border" style={{ color: "#D05270" }} />
+                ) : (
+                  "Register"
+                )}
               </Button>
             </div>
           </Form>

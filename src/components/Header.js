@@ -1,19 +1,19 @@
 import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logo from "../img/logo.jpg";
-import { useCookies } from "react-cookie";
-import { useNavigate } from "react-router-dom";
+// import { useCookies } from "react-cookie";
+// import { useNavigate } from "react-router-dom";
 import "./css/Head.css";
 
 function Header({ hide }) {
   // eslint-disable-next-line no-unused-vars
-  let [{ userId }, _, removeCookie] = useCookies();
-  let navigate = useNavigate();
+  // let [{ userId }, _, removeCookie] = useCookies();
+  // let navigate = useNavigate();
 
-  const logOut = () => {
-    removeCookie("userId");
-    navigate("/");
-  };
+  // const logOut = () => {
+  //   removeCookie("userId");
+  //   navigate("/");
+  // };
   return (
     <div style={{ marginLeft: "0.5rem", marginRight: "0.5rem" }}>
       <Navbar style={{ backgroundColor: "white" }} expand="lg">
@@ -35,7 +35,7 @@ function Header({ hide }) {
           className="justify-content-end collapse"
           id="basic-navbar-nav"
         >
-          {userId !== undefined ? (
+          {/* {userId !== undefined ? (
             <Link style={{ textDecoration: "none" }} to={`/profile`}>
               <Nav.Link className="text-secondary fw-bold" href="#home">
                 Student Profile
@@ -59,7 +59,7 @@ function Header({ hide }) {
                 Register
               </Nav.Link>
             </Link>
-          )}
+          )} */}
           <Link style={{ textDecoration: "none" }} to="/about">
             <Nav.Link className="text-secondary fw-bold" href="#action/3.1">
               About Us
